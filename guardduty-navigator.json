@@ -9,7 +9,10 @@
 	"description": "",
 	"filters": {
 		"platforms": [
-			"AWS"
+			"Linux",
+			"Windows",
+			"AWS",
+			"PRE"
 		]
 	},
 	"sorting": 0,
@@ -21,10 +24,802 @@
 	"hideDisabled": false,
 	"techniques": [
 		{
+			"techniqueID": "T1071",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/C&CActivity.B!DNS,\nTrojan:EC2/BlackholeTraffic,\nTrojan:EC2/BlackholeTraffic!DNS,\nTrojan:EC2/DropPoint,\nTrojan:EC2/DropPoint!DNS,\nUnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1499",
+			"tactic": "impact",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/DenialOfService.Dns,\nBackdoor:EC2/DenialOfService.Tcp,\nBackdoor:EC2/DenialOfService.Udp,\nBackdoor:EC2/DenialOfService.UdpOnTcpPorts,\nBackdoor:EC2/DenialOfService.UnusualProtocol",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098.001",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098.002",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098.003",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1098.004",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1595",
+			"tactic": "reconnaissance",
+			"color": "#e60d0d",
+			"comment": "Recon:EC2/PortProbeEMRUnprotectedPort,\nRecon:EC2/PortProbeUnprotectedPort",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1595.001",
+			"tactic": "reconnaissance",
+			"color": "#e60d0d",
+			"comment": "Recon:EC2/PortProbeEMRUnprotectedPort,\nRecon:EC2/PortProbeUnprotectedPort",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1595.002",
+			"tactic": "reconnaissance",
+			"color": "#e60d0d",
+			"comment": "Recon:EC2/PortProbeEMRUnprotectedPort,\nRecon:EC2/PortProbeUnprotectedPort",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071.001",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/C&CActivity.B!DNS,\nTrojan:EC2/BlackholeTraffic,\nTrojan:EC2/BlackholeTraffic!DNS,\nTrojan:EC2/DropPoint,\nTrojan:EC2/DropPoint!DNS,\nUnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071.002",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/C&CActivity.B!DNS,\nTrojan:EC2/BlackholeTraffic,\nTrojan:EC2/BlackholeTraffic!DNS,\nTrojan:EC2/DropPoint,\nTrojan:EC2/DropPoint!DNS,\nUnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071.003",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/C&CActivity.B!DNS,\nTrojan:EC2/BlackholeTraffic,\nTrojan:EC2/BlackholeTraffic!DNS,\nTrojan:EC2/DropPoint,\nTrojan:EC2/DropPoint!DNS,\nUnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1071.004",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/C&CActivity.B!DNS,\nTrojan:EC2/BlackholeTraffic,\nTrojan:EC2/BlackholeTraffic!DNS,\nTrojan:EC2/DropPoint,\nTrojan:EC2/DropPoint!DNS,\nUnauthorizedAccess:EC2/MaliciousIPCaller.Custom",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1020",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Behavior:EC2/TrafficVolumeUnusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1020.001",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Behavior:EC2/TrafficVolumeUnusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/WinRMBruteForce,\nUnauthorizedAccess:EC2/RDPBruteForce,\nUnauthorizedAccess:EC2/SSHBruteForce",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.001",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/WinRMBruteForce,\nUnauthorizedAccess:EC2/RDPBruteForce,\nUnauthorizedAccess:EC2/SSHBruteForce",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.002",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/WinRMBruteForce,\nUnauthorizedAccess:EC2/RDPBruteForce,\nUnauthorizedAccess:EC2/SSHBruteForce",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/WinRMBruteForce,\nUnauthorizedAccess:EC2/RDPBruteForce,\nUnauthorizedAccess:EC2/SSHBruteForce",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1110.004",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/WinRMBruteForce,\nUnauthorizedAccess:EC2/RDPBruteForce,\nUnauthorizedAccess:EC2/SSHBruteForce",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1580",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Discovery:S3/BucketEnumeration.Unusual,\nDiscovery:S3/MaliciousIPCaller.Custom,\nDiscovery:S3/TorIPCaller,\nPenTest:S3/KaliLinux,\nPenTest:S3/ParrotLinux,\nPenTest:S3/PentooLinux,\nRecon:IAMUser/NetworkPermissions,\nRecon:IAMUser/ResourcePermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1526",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Persistence:IAMUser/ResourcePermissions,\nRecon:IAMUser/MaliciousIPCaller,\nRecon:IAMUser/MaliciousIPCaller.Custom,\nRecon:IAMUser/TorIPCaller,\nRecon:IAMUser/UserPermissions",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1485",
+			"tactic": "impact",
+			"color": "#e60d0d",
+			"comment": "Impact:S3/ObjectDelete.Unusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1530",
+			"tactic": "collection",
+			"color": "#e60d0d",
+			"comment": "Impact:S3/PermissionsModification.Unusual,\nUnauthorizedAccess:S3/MaliciousIPCaller.Custom,\nUnauthorizedAccess:S3/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1189",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DriveBySourceTraffic!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1568",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DGADomainRequest.B,\nTrojan:EC2/DGADomainRequest.C!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1568.002",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DGADomainRequest.B,\nTrojan:EC2/DGADomainRequest.C!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1568.001",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DGADomainRequest.B,\nTrojan:EC2/DGADomainRequest.C!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1568.003",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DGADomainRequest.B,\nTrojan:EC2/DGADomainRequest.C!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1499.001",
+			"tactic": "impact",
+			"color": "",
+			"comment": "Backdoor:EC2/DenialOfService.Dns,\nBackdoor:EC2/DenialOfService.Tcp,\nBackdoor:EC2/DenialOfService.Udp,\nBackdoor:EC2/DenialOfService.UdpOnTcpPorts,\nBackdoor:EC2/DenialOfService.UnusualProtocol",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1499.002",
+			"tactic": "impact",
+			"color": "",
+			"comment": "Backdoor:EC2/DenialOfService.Dns,\nBackdoor:EC2/DenialOfService.Tcp,\nBackdoor:EC2/DenialOfService.Udp,\nBackdoor:EC2/DenialOfService.UdpOnTcpPorts,\nBackdoor:EC2/DenialOfService.UnusualProtocol",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1499.003",
+			"tactic": "impact",
+			"color": "",
+			"comment": "Backdoor:EC2/DenialOfService.Dns,\nBackdoor:EC2/DenialOfService.Tcp,\nBackdoor:EC2/DenialOfService.Udp,\nBackdoor:EC2/DenialOfService.UdpOnTcpPorts,\nBackdoor:EC2/DenialOfService.UnusualProtocol",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1499.004",
+			"tactic": "impact",
+			"color": "",
+			"comment": "Backdoor:EC2/DenialOfService.Dns,\nBackdoor:EC2/DenialOfService.Tcp,\nBackdoor:EC2/DenialOfService.Udp,\nBackdoor:EC2/DenialOfService.UdpOnTcpPorts,\nBackdoor:EC2/DenialOfService.UnusualProtocol",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DNSDataExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048.001",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DNSDataExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048.002",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DNSDataExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1048.003",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/DNSDataExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Exfiltration:S3/ObjectRead.Unusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567.001",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Exfiltration:S3/ObjectRead.Unusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1567.002",
+			"tactic": "exfiltration",
+			"color": "#e60d0d",
+			"comment": "Exfiltration:S3/ObjectRead.Unusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
 			"techniqueID": "T1190",
 			"tactic": "initial-access",
 			"color": "#e60d0d",
-			"comment": "",
+			"comment": "UnauthorizedAccess:EC2/MetadataDNSRebind",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.001",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.002",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.003",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.004",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.006",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.007",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1562.008",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "Policy:S3/AccountBlockPublicAccessDisabled,\nPolicy:S3/BucketBlockPublicAccessDisabled,\nPolicy:S3/BucketAnonymousAccessGranted,\nPolicy:S3/BucketPublicAccessGranted,\nStealth:S3/ServerAccessLoggingDisabled,\nPersistence:IAMUser/NetworkPermissions,\nStealth:IAMUser/CloudTrailLoggingDisabled,\nStealth:IAMUser/LoggingConfigurationModified,\nStealth:IAMUser/PasswordPolicyChange",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1046",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Impact:EC2/PortSweep,\nRecon:EC2/Portscan",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1571",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "Behavior:EC2/NetworkPortUnusual",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/PhishingDomainRequest!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566.001",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/PhishingDomainRequest!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566.002",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/PhishingDomainRequest!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1566.003",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "Trojan:EC2/PhishingDomainRequest!DNS",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:EC2/TorClient",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.001",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:EC2/TorClient",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.002",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:EC2/TorClient",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.003",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:EC2/TorClient",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1090.004",
+			"tactic": "command-and-control",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:EC2/TorClient",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1496",
+			"tactic": "impact",
+			"color": "#e60d0d",
+			"comment": "Backdoor:EC2/Spambot,\nCryptoCurrency:EC2/BitcoinTool.B,\nCryptoCurrency:EC2/BitcoinTool.B!DNS,\nUnauthorizedAccess:EC2/TorRelay,\nResourceConsumption:IAMUser/ComputeResources",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.001",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.002",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.003",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.004",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.005",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1552.006",
+			"tactic": "credential-access",
+			"color": "#e60d0d",
+			"comment": "UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.001",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.002",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.003",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "defense-evasion",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "persistence",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "privilege-escalation",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1078.004",
+			"tactic": "initial-access",
+			"color": "#e60d0d",
+			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
 			"enabled": true,
 			"metadata": [],
 			"showSubtechniques": false
