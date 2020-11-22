@@ -1,5 +1,7 @@
 # Mitre ATT&CK® Mappings for Amazon GuardDuty
 
+![Mapping](https://github.com/amrandazz/attack-guardduty-navigator/blob/master/GuardDuty%20ATT%26CK%20Mapping.png =250x)
+
 GuardDuty operates on three data sources: CloudTrail, VPC flow logs (netflow), and Route 53 DNS logs. Thus it doesn't have a lot of visibility, which makes sense when we consider the Shared Responsibility model. Additionally, many GuardDuty Findings are anomaly detections rather than categorical detections. Modeling some of these GuardDuty Findings into Mitre ATT&CK can be a bit of a square peg in a round hole so it's not a perfect science by any means. I clearly diverged with AWS on some of their own mappings as you'll see Persistence Findings mapped to Discovery and so forth.
 
 As of November 22, 2020, there are 71 unique GuardDuty Findings.
