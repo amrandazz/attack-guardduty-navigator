@@ -14,9 +14,9 @@ There's a dotted inclusion of Command and Control since this Tactic is not yet i
 - The Pentest:S3 Findings were thrown under Discovery, particularly since these are not a result of using valid AWS access keys. These are likely going to be unauthenticated S3 API calls.
 - Policy:S3 were categorized into Defensive Evasion though these Findings are more indicative of risky configuration changes in S3 rather than an attacker modification. These, realistically, do not map to ATT&CK.
 - Backdoor:EC2/Spambot are categorized as Resource Hijacking versus Phishing (T1566) since the abuse of SMTP appears to be the intent of the detection.
-- Impact:S3/PermissionsModification.Unusual are categorized as collection as this seems to look for object permission modification.
+- Impact:S3/PermissionsModification.Unusual are categorized as Collection as this seems to look for object permission modification.
 - UnauthorizedAccess:S3 were placed into Collection as this is S3 API access.
-- PenTest:IAMUser and Policy:IAMUser/RootCredentialUsage Findings could represent many life cycles of the attack but were modeled as Initial Access for similicity. The first alert for this rule would likely indicate the initial access from those valid AWS access keys.
-- Recon:IAMUser Findings have all been modeling into Discovery since these is authenticated API access.
+- PenTest:IAMUser and Policy:IAMUser/RootCredentialUsage Findings could represent many life cycles of the attack but were modeled as Initial Access for simplicity. The first alert for this rule would likely indicate the initial access from those valid AWS access keys.
+- Recon:IAMUser Findings have all been modeled into Discovery since this is authenticated API access.
 - Stealth:IAMUser/PasswordPolicyChange should probably be a Policy Finding and doesn't map well.
-- UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration detects instance credentials in use, but modeling into Credential Access given the uniqueness of the technique and this detection. Realistically, monitoring for an SSRF vulnerability to subsequently access the IMDS would probably fall within the Enterprise Linux Matrix.
+- UnauthorizedAccess:IAMUser/InstanceCredentialExfiltration detects instance credentials in use, but were modeled into Credential Access given the uniqueness of the technique and this detection. Realistically, monitoring for an SSRF vulnerability to subsequently access the IMDS would probably fall within the Enterprise Linux Matrix.
