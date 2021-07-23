@@ -816,7 +816,25 @@
 			"showSubtechniques": false
 		},
 		{
-			"techniqueID": "T1078.004",
+			"techniqueID": "T1087.004",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Discovery:IAMUser/AnomalousBehavior",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},
+		{
+			"techniqueID": "T1069.003",
+			"tactic": "discovery",
+			"color": "#e60d0d",
+			"comment": "Discovery:IAMUser/AnomalousBehavior",
+			"enabled": true,
+			"metadata": [],
+			"showSubtechniques": false
+		},			
+		{
+			"techniqueID": "T1078.004", 
 			"tactic": "initial-access",
 			"color": "#e60d0d",
 			"comment": "PenTest:IAMUser/KaliLinux,\nPenTest:IAMUser/ParrotLinux,\nPenTest:IAMUser/PentooLinux,\nPolicy:IAMUser/RootCredentialUsage,\nPrivilegeEscalation:IAMUser/AdministrativePermissions,\nUnauthorizedAccess:IAMUser/ConsoleLogin,\nUnauthorizedAccess:IAMUser/ConsoleLoginSuccess.B,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller,\nUnauthorizedAccess:IAMUser/MaliciousIPCaller.Custom,\nUnauthorizedAccess:IAMUser/TorIPCaller",
